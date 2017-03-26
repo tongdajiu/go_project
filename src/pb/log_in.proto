@@ -1,0 +1,22 @@
+import "conn_addr.proto";
+package game;
+message LoginRequest{
+    required string user_name=1;
+	required string pass_word=2;
+    required int32 entrypt_type=3;
+    optional ConnAddr addr=4;
+}
+
+enum ErrCode{
+    AUTHEN_OK           = 0;
+    USER_LOCKED         = 1;
+    AREA_NOT_ALLOWED    = 2;
+}
+
+message LoginResponse{
+    required ErrCode err_code=1;
+    required int64 player_id=2;
+    required string err_string=3;
+    required string game_server=4;
+    required string port=5;
+}

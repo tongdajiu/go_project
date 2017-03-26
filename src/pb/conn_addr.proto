@@ -1,0 +1,6 @@
+package game;
+
+message ConnAddr{
+    required string address = 1;
+    required int32 port = 2;
+}

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<conf>
+<APP loglevel="INFO" filesize="500M" rollupnums="3">./log/app.log</APP>
+<ACC loglevel="INFO" filesize="500M" rollupnums="3">./log/acc.log</ACC>
+<SYS loglevel="INFO" filesize="500M" rollupnums="3">./log/sys.log</SYS>
+</conf>

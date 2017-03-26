@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<conf>
+<APP loglevel="debug" filesize="100" rollupnums="3">./app.log</APP>
+<ACC loglevel="debug" filesize="100" rollupnums="3">./acc.log</ACC>
+<SYS loglevel="debug" filesize="100" rollupnums="3">./sys.log</SYS>
+</conf>

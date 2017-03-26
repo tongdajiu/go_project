@@ -1,0 +1,29 @@
+package buss;
+message Pull{
+    required int32 connec_id = 1;
+    required int32 io_thread_id=2;
+    required int64 link_id=3;
+    optional bytes user_data=4;
+}
+
+message PushReq{
+    required int64 link_id=1;
+    required bytes user_data=2;
+}
+
+enum ResultCode{
+    CLIENT_RESPONSE_OK=0;       // Client应答
+    CLIENT_IN_OTHER_SVR=1;      // Client连接不在当前服务器上
+    CLIENT_NOT_EXSIT=2;         // Client连接不存在
+}
+
+message PushRes{
+    required ResultCode result_code=1;
+    required int64 link_id=2;
+    required bytes user_data=3;
+    optional string buss_svr_address=4;
+    optional int32 buss_port=5;
+}
+
+
+
